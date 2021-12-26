@@ -1,14 +1,14 @@
 import { inject, injectable } from "tsyringe";
-import { AppError } from "../../../../erros/AppError";
+import { AppError } from "@shared/errors/AppError";
 import { hash } from "bcrypt";
-import { ICreateUsersDTO } from "../../dtos/ICreateUsersDTO";
-import { IUserRepository } from "../../repositories/IUsersRepository";
+import { ICreateUsersDTO } from '@modules/accounts/dtos/ICreateUsersDTO'
+import { IUsersRepository } from "@modules/accounts/repositories/IUsersRepository";
 
 @injectable()
-class CreateUserUserCase {
+class CreateUserUseCase {
   constructor(
     @inject("UsersRepository")
-    private usersRepository: IUserRepository
+    private usersRepository: IUsersRepository
   ) {}
 
   async execute({
@@ -34,4 +34,4 @@ class CreateUserUserCase {
   }
 }
 
-export { CreateUserUserCase };
+export { CreateUserUseCase };
