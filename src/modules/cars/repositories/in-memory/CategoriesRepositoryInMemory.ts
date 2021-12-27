@@ -23,6 +23,8 @@ class CategoriesRepositoryInMemory implements ICategoriesRepository {
     });
 
     this.categories.push(category);
+
+    return
   }
 }
 
