@@ -1,7 +1,7 @@
 import { ICreateCarsDTO } from "@modules/cars/dtos/ICreateCarsDTO";
 import { ICarsRepository } from "@modules/cars/repositories/ICarsRepository";
 import { getRepository, Repository } from "typeorm";
-import { Car } from "../typeorm/entities/Cars";
+import { Car } from "../entities/Cars";
 
 class CarsRepository implements ICarsRepository {
   private repository: Repository<Car>;
@@ -18,6 +18,8 @@ class CarsRepository implements ICarsRepository {
     fine_amount,
     license_plate,
     name,
+    specifications,
+    id,
   }: ICreateCarsDTO): Promise<Car> {
     const car = this.repository.create({
       brand,
@@ -27,6 +29,8 @@ class CarsRepository implements ICarsRepository {
       fine_amount,
       license_plate,
       name,
+      specifications,
+      id,
     });
     await this.repository.save(car);
     return car;
@@ -58,6 +62,10 @@ class CarsRepository implements ICarsRepository {
     }
     const cars = await carsQuery.getMany();
     return cars;
+  }
+  async findById(id: string): Promise<Car> {
+    const car = await this.repository.findOne(id);
+    return car;
   }
 }
 
