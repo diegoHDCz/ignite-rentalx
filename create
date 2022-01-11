@@ -1,0 +1,4 @@
+yarn run v1.22.10
+$ ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli migration -n CreateRenatls
+[INFO] 17:49:16 ts-node-dev ver. 1.1.8 (using ts-node ver. 9.1.1, typescript ver. 4.5.3)
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
