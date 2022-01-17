@@ -7,7 +7,7 @@ export class CreateRentals1641761389508 implements MigrationInterface {
         name: "rentals",
         columns: [
           {
-            name: "id,",
+            name: "id",
             type: "uuid",
             isPrimary: true,
           },
