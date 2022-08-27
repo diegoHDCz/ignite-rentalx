@@ -5,7 +5,7 @@
 Projeto que permite login com JWT, documentação com SWAGGER, para cadastro de usuários, veículos, categorias de carros e aluguel. 
 Este projeto foi desenvolviedo usando Typescript, Express, PostgreSQL e mapemento relacional com TypeORM. Teste unitários realizados com Jest.
 
-Arquitetura de reposit
+Arquitetura de repositorios
 
 Para inicializar o projeto, faça o clone deste git e em seguida em um terminal integrado ao projeto digite:
  - npm install (ou caso use o yarn, poderá inicializar com sua sequência).
